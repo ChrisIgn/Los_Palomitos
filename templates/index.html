@@ -1,0 +1,48 @@
+<!--{% block title %}Login{% endblock %}
+{% block body %}
+<form class="form-signin">
+    <h1 class="h3 mb-3 fw-normal">Porfavor inicie sesión</h1>
+    <div class="form-floating">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        <label for="username">Username</label>
+    </div>
+    <div class="form-floating mt-2">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <label for="password">Password</label>
+    </div>
+    <button class="w-100 btn-lg btn-primary" type="submit">Sign in</button>
+</form>
+{% endblock %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form-control" action="acceso-login" method="post">
+            <h1 class="text-center t">Login</h1>
+            {% if mensaje %}
+            <div class="alert alert-danger" role="alert">
+                {{ mensaje}}
+              </div>
+              {% endif %}
+      <div class="form-group ">
+        <label for="exampleInputEmail1 " class="t text-center">Usuario</label>
+        <input type="usuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su Usuario " name="txtUsuario">
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div> <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1 " class="t text-center">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su Contraseña" name="txtPassword">
+      </div>
+      <div class="form-check">
+    
+      </div>
+      <div class="text-center">
+      <button type="submit" class="btn btn-success">Ingresar</button>
+    </div>
+    </form>
+</body>
+</html>
